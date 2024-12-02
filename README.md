@@ -14,7 +14,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 """
 pip install -r requirements.txt
 """
-
+wawa
 3. Download the dataset:
 - Visit https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 - Download and extract to `data/raw` directory

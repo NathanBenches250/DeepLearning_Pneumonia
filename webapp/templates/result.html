@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Results</h1>
+        <div class="results">
+            <div class="image-container">
+                <h2>Original X-ray</h2>
+                <img src="{{ image_path }}" alt="Original X-ray">
+            </div>
+            <div class="image-container">
+                <h2>Activation Map</h2>
+                <img src="{{ heatmap_path }}" alt="Activation Map">
+            </div>
+            <div class="prediction">
+                <h2>Diagnosis</h2>
+                <p>Prediction: <strong>{{ prediction }}</strong></p>
+                <p>Confidence: <strong>{{ "%.2f"|format(confidence * 100) }}%</strong></p>
+            </div>
+        </div>
+        <a href="{{ url_for('index') }}" class="button">Analyze Another Image</a>
+    </div>
+</body>
+</html>
